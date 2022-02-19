@@ -14,26 +14,34 @@ package com.wit.controlFlow
 // Hint: the week 2 syntax labs are a good support for completing this project
 
 fun main(args: Array<String>) {
-    minimumOf(5,7)
+    println("----------------------------------------------------------------------------------------------------")
+    print("1. ")
+    minimumOf(5, 7)
+    println("----------------------------------------------------------------------------------------------------")
+    print("2. ")
     rangeOf(4)
+    println("----------------------------------------------------------------------------------------------------")
+    print("3. For the variable 0.0F ")
     inferredTypeOf(0.0F)
+    println("----------------------------------------------------------------------------------------------------")
+    print("4. ")
     stringContains("wordle")
+    println("----------------------------------------------------------------------------------------------------")
 }
 
-fun minimumOf(number1: Long, number2: Long){
+fun minimumOf(number1: Long, number2: Long) {
     //  This function takes in two numbers and:
     //  if number1 is less than number2, then print a message informing the user of that.
     //  if number1 is greater than or equal to number2, print a message letting the user know that.
-    if (number1 < number2){
+    if (number1 < number2) {
         println("$number1 is less than $number2")
-    }
-    else {
+    } else {
         println("$number1 is greater than or equal to $number2")
     }
 
 }
 
-fun rangeOf(number: Int){
+fun rangeOf(number: Int) {
     // This function takes in a number and prints out the range that the number falls in.
     // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
     // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
@@ -44,25 +52,25 @@ fun rangeOf(number: Int){
     else if (number >= 21) println("The number $number falls into the range 21 or above")
 }
 
-fun inferredTypeOf(variable: Any){
+fun inferredTypeOf(variable: Any) {
     // This function examines the inferred type of the variable passed as a parameter.
     // When the type is Int, print out that the data type of the variable is Int.
     //    Adopt the same approach for the following types: Long, Double, Float or Boolean.
     // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
-    when(variable){
-        is Int -> println("The inferred type is int")
-        is Long -> println("The inferred type is Long")
-        is Double -> println("The inferred type is Double")
-        is Float -> println("The inferred type is float")
-        is Boolean -> println("The inferred type is Boolean")
-        else ->{
-            println("Data type is something else ")
+    when (variable) {
+        is Int -> println("the inferred type is int")
+        is Long -> println("the inferred type is Long")
+        is Double -> println("the inferred type is Double")
+        is Float -> println("the inferred type is float")
+        is Boolean -> println("the inferred type is Boolean")
+        else -> {
+            println("the data type is something else ")
         }
     }
 
 }
 
-fun stringContains(str : String){
+fun stringContains(str: String) {
     //    If the string, passed as a parameter:
     //    - contains the letter A, print the string and say it contains A.
     //    - contains the letter B, print the string and say it contains B.
@@ -70,12 +78,12 @@ fun stringContains(str : String){
     //    - is empty, inform the user that it is empty.
     //    - otherwise print the string and say it doesn't contain A, B or C.
     when {
-        str.contains("A") -> println("$str Contains A")
-        str.contains("B") -> println("$str Contains B")
-        str.contains("C") -> println("$str Contains C")
+        str.contains("A") -> println("The string $str contains A")
+        str.contains("B") -> println("The string $str contains B")
+        str.contains("C") -> println("The string $str contains C")
         str.isEmpty() -> println("The String is Empty")
         else -> {
-            println("It doesnt contain A, B or C")
+            println("The string $str doesn't contain A, B or C")
         }
     }
 }
